@@ -1,5 +1,4 @@
 import unittest
-
 from textnode import TextNode, TextType
 
 
@@ -9,7 +8,6 @@ class TestTextNode(unittest.TestCase):
         node_b2 = TextNode("bold text node", TextType.BOLD)
         self.assertEqual(node_b1, node_b2)
 
-    #@unittest.skip("test neq later")
     def test_neq(self):
         node_normal = TextNode("normal text node", TextType.NORMAL)
         node_bold = TextNode("bold text node", TextType.BOLD)
