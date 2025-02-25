@@ -78,10 +78,10 @@ class TestHTMLNode(unittest.TestCase):
         multiple_parents = ParentNode("p", 
                                       [ParentNode("li", 
                                                   [LeafNode("b", "bold text", {"target" : "_blank"})],
-                                                  {"href" : "https://boot.dev"}
+                                                  {"href" : "https://google.com"}
                                                   )])
         self.assertEqual(multiple_parents.to_html(), 
-                         "<p><li href=\"https://boot.dev\"><b target=\"_blank\">bold text</b></li></p>")
+                         "<p><li href=\"https://google.com\"><b target=\"_blank\">bold text</b></li></p>")
             
 
         with self.assertRaises(TypeError):

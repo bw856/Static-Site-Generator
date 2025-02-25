@@ -11,6 +11,14 @@ class HTMLNode():
         self.children = children
         self.props = props
 
+    # determine if two HTMLNodes are equal
+    def __eq__(self, other):
+        if not isinstance(other, HTMLNode): return False
+        return self.tag == other.tag and\
+               self.value == other.value and\
+               self.children == other.children and\
+               self.props == other.props
+
     # overriden by children to render themselves as HTML
     def to_html(self):
         raise NotImplementedError
